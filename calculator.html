@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Trip Cost Calculator | WanderLux Travel Agency</title>
+
+    <meta name="description"
+          content="Estimate your holiday costs with the WanderLux Trip Cost Calculator. Choose your destination, travellers, duration and travel style.">
+
+    <meta name="theme-color" content="#103B4A">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/calculator.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ACCESSIBILITY: SKIP LINK -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+    <!-- HEADER AND NAVIGATION -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html"
+               class="logo"
+               aria-label="WanderLux Travel Agency homepage">
+                Wander<span>Lux</span>
+                <small>TRAVEL AGENCY</small>
+            </a>
+
+            <button class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="primary-navigation"
+                 class="primary-nav"
+                 aria-label="Main navigation">
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">
+                            Destinations
+                        </a>
+                    </li>
+                    <li>
+                        <a href="calculator.html"
+                           class="active"
+                           aria-current="page">
+                            Trip Calculator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="appointment.html">
+                            Appointment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- PAGE INTRODUCTION -->
+        <section class="page-hero"
+                 aria-labelledby="page-title">
+
+            <div class="container">
+                <p class="hero-eyebrow">
+                    PLAN YOUR NEXT ADVENTURE
+                </p>
+
+                <h1 id="page-title">
+                    Trip Cost Calculator
+                </h1>
+
+                <p>
+                    Explore your travel options and calculate
+                    an estimated holiday budget based on your
+                    destination, travel group and preferred style.
+                </p>
+            </div>
+        </section>
+
+        <!-- CALCULATOR INTRODUCTION -->
+        <section class="section"
+                 aria-labelledby="calculator-heading">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-eyebrow">
+                        YOUR TRAVEL BUDGET
+                    </p>
+
+                    <h2 id="calculator-heading">
+                        Estimate Your Dream Holiday
+                    </h2>
+
+                    <p>
+                        Complete the fields below to receive an
+                        instant estimated cost in Australian dollars.
+                    </p>
+                </div>
+
+                <!-- CALCULATOR FORM -->
+                <div class="form-container reveal">
+
+                    <form id="trip-calculator"
+                          novalidate>
+
+                        <!-- DESTINATION -->
+                        <div class="form-group">
+                            <label for="destination">
+                                Destination *
+                            </label>
+
+                            <select id="destination"
+                                    name="destination"
+                                    required
+                                    aria-describedby="destination-error">
+
+                                <option value="">
+                                    Select a destination
+                                </option>
+
+                                <option value="bali">
+                                    Bali, Indonesia
+                                </option>
+
+                                <option value="thailand">
+                                    Thailand
+                                </option>
+
+                                <option value="japan">
+                                    Japan
+                                </option>
+
+                                <option value="switzerland">
+                                    Switzerland
+                                </option>
+
+                                <option value="maldives">
+                                    Maldives
+                                </option>
+
+                            </select>
+
+                            <span id="destination-error"
+                                  class="form-error"></span>
+                        </div>
+
+                        <!-- NUMBER OF TRAVELLERS -->
+                        <div class="form-group">
+                            <label for="travellers">
+                                Number of Travellers *
+                            </label>
+
+                            <input type="number"
+                                   id="travellers"
+                                   name="travellers"
+                                   min="1"
+                                   max="20"
+                                   step="1"
+                                   inputmode="numeric"
+                                   placeholder="e.g. 2"
+                                   required
+                                   aria-describedby="travellers-help travellers-error">
+
+                            <small id="travellers-help">
+                                Enter between 1 and 20 travellers.
+                            </small>
+
+                            <span id="travellers-error"
+                                  class="form-error"></span>
+                        </div>
+
+                        <!-- NUMBER OF DAYS -->
+                        <div class="form-group">
+                            <label for="days">
+                                Number of Travel Days *
+                            </label>
+
+                            <input type="number"
+                                   id="days"
+                                   name="days"
+                                   min="1"
+                                   max="60"
+                                   step="1"
+                                   inputmode="numeric"
+                                   placeholder="e.g. 5"
+                                   required
+                                   aria-describedby="days-help days-error">
+
+                            <small id="days-help">
+                                Enter between 1 and 60 days.
+                            </small>
+
+                            <span id="days-error"
+                                  class="form-error"></span>
+                        </div>
+
+                        <!-- TRAVEL STYLE -->
+                        <div class="form-group">
+                            <label for="travel-style">
+                                Travel Style *
+                            </label>
+
+                            <select id="travel-style"
+                                    name="travel-style"
+                                    required
+                                    aria-describedby="travel-style-error">
+
+                                <option value="">
+                                    Select your travel style
+                                </option>
+
+                                <option value="budget">
+                                    Budget
+                                </option>
+
+                                <option value="standard">
+                                    Standard
+                                </option>
+
+                                <option value="luxury">
+                                    Luxury
+                                </option>
+
+                            </select>
+
+                            <span id="travel-style-error"
+                                  class="form-error"></span>
+                        </div>
+
+                        <!-- CALCULATION BUTTONS -->
+                        <div class="form-actions">
+
+                            <button type="submit"
+                                    class="btn btn-secondary"
+                                    id="calculate-button">
+                                Calculate Trip Cost
+                            </button>
+
+                            <button type="reset"
+                                    class="btn"
+                                    id="reset-button"
+                                    style="background:#E8ECEC;
+                                           color:#103B4A;
+                                           border-color:#C8D0D1;">
+                                Reset Calculator
+                            </button>
+
+                        </div>
+
+                        <!-- GENERAL ERROR MESSAGE -->
+                        <div id="calculator-error"
+                             class="form-status error"
+                             role="alert"
+                             hidden>
+                        </div>
+
+                    </form>
+
+                    <!-- CALCULATION RESULT PANEL -->
+                    <section id="calculator-result"
+                             class="result-panel"
+                             aria-labelledby="result-heading"
+                             aria-live="polite"
+                             aria-atomic="true"
+                             tabindex="-1"
+                             hidden>
+
+                        <h2 id="result-heading">
+                            Your Estimated Trip Cost
+                        </h2>
+
+                        <p id="result-summary">
+                        </p>
+
+                        <p>
+                            <strong>Estimated Total:</strong>
+                            <span id="result-total"></span>
+                        </p>
+
+                        <div class="cost-breakdown">
+
+                            <h3>Estimated Cost Breakdown</h3>
+
+                            <dl>
+                                <dt>
+                                    Destination
+                                </dt>
+                                <dd id="result-destination">
+                                </dd>
+
+                                <dt>
+                                    Number of Travellers
+                                </dt>
+                                <dd id="result-travellers">
+                                </dd>
+
+                                <dt>
+                                    Duration
+                                </dt>
+                                <dd id="result-days">
+                                </dd>
+
+                                <dt>
+                                    Travel Style
+                                </dt>
+                                <dd id="result-style">
+                                </dd>
+
+                                <dt>
+                                    Traveller Costs
+                                </dt>
+                                <dd id="result-travel-cost">
+                                </dd>
+
+                                <dt>
+                                    Accommodation Costs
+                                </dt>
+                                <dd id="result-accommodation">
+                                </dd>
+
+                                <dt>
+                                    Travel Style Adjustment
+                                </dt>
+                                <dd id="result-multiplier">
+                                </dd>
+                            </dl>
+
+                        </div>
+
+                        <p class="estimate-note">
+                            This estimate uses demonstration rates
+                            and is not a confirmed booking quotation.
+                            Flights, insurance, taxes and other
+                            additional expenses are excluded.
+                        </p>
+
+                        <a href="appointment.html"
+                           class="btn btn-secondary">
+                            Request a Travel Appointment
+                        </a>
+
+                    </section>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HOW THE ESTIMATE WORKS -->
+        <section class="section packages-section"
+                 aria-labelledby="how-heading">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-eyebrow">
+                        SIMPLE AND TRANSPARENT
+                    </p>
+
+                    <h2 id="how-heading">
+                        How We Estimate Your Trip
+                    </h2>
+
+                    <p>
+                        Our calculator uses preset destination
+                        rates to provide an approximate travel
+                        budget for planning purposes.
+                    </p>
+                </div>
+
+                <div class="benefits-grid">
+
+                    <article class="benefit-item reveal">
+                        <span class="benefit-number">
+                            01
+                        </span>
+
+                        <h3>Select Your Destination</h3>
+
+                        <p>
+                            Choose from Bali, Thailand, Japan,
+                            Switzerland and Maldives.
+                            Each destination has its own
+                            estimated daily travel rates.
+                        </p>
+                    </article>
+
+                    <article class="benefit-item reveal">
+                        <span class="benefit-number">
+                            02
+                        </span>
+
+                        <h3>Enter Your Travel Details</h3>
+
+                        <p>
+                            Add the number of people travelling
+                            and the number of days.
+                            Accommodation is estimated using
+                            two travellers per room.
+                        </p>
+                    </article>
+
+                    <article class="benefit-item reveal">
+                        <span class="benefit-number">
+                            03
+                        </span>
+
+                        <h3>Choose Your Travel Style</h3>
+
+                        <p>
+                            Choose Budget, Standard or Luxury.
+                            Your selected style adjusts the
+                            final estimated package cost.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULATOR CALL TO ACTION -->
+        <section class="cta-section"
+                 aria-labelledby="cta-heading">
+
+            <div class="container cta-content reveal">
+
+                <p class="section-eyebrow">
+                    LET'S PLAN YOUR HOLIDAY
+                </p>
+
+                <h2 id="cta-heading">
+                    Need a Personalised Travel Plan?
+                </h2>
+
+                <p>
+                    Our travel consultants can help you explore
+                    destinations and prepare a customised
+                    holiday plan based on your preferences.
+                </p>
+
+                <a href="appointment.html"
+                   class="btn btn-primary">
+                    Request an Appointment
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="logo footer-logo"
+                   aria-label="WanderLux homepage">
+                    Wander<span>Lux</span>
+                    <small>TRAVEL AGENCY</small>
+                </a>
+
+                <p>
+                    Helping you discover exciting destinations
+                    through personalised holiday planning
+                    and memorable travel experiences.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">
+                            Destinations
+                        </a>
+                    </li>
+                    <li>
+                        <a href="calculator.html">
+                            Trip Calculator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="appointment.html">
+                            Appointment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h2>Travel Services</h2>
+
+                <ul>
+                    <li>
+                        <a href="destinations.html">
+                            Holiday Packages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">
+                            Guided Tours
+                        </a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">
+                            Flights &amp; Hotels
+                        </a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">
+                            Honeymoon Specials
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h2>Get in Touch</h2>
+
+                <p>
+                    Have questions about your next holiday?
+                    Contact our travel team for assistance.
+                </p>
+
+                <a href="contact.html">
+                    Contact WanderLux
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+
+            <p>
+                &copy;
+                <span id="current-year">2026</span>
+                WanderLux Travel Agency.
+                All rights reserved.
+            </p>
+
+            <p>
+                Designed for ICT502 Web Development Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Request an Appointment | WanderLux Travel Agency</title>
+
+    <meta name="description"
+          content="Request a travel planning appointment with WanderLux Travel Agency. Tell us your holiday preferences and arrange a personalised consultation.">
+
+    <meta name="theme-color" content="#103B4A">
+
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Shared navigation and form functionality -->
+    <script src="js/main.js" defer></script>
+    <script src="js/forms.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Accessibility skip link -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html"
+               class="logo"
+               aria-label="WanderLux Travel Agency homepage">
+                Wander<span>Lux</span>
+                <small>TRAVEL AGENCY</small>
+            </a>
+
+            <!-- Mobile menu button -->
+            <button class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Main navigation -->
+            <nav id="primary-navigation"
+                 class="primary-nav"
+                 aria-label="Main navigation">
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="destinations.html">
+                            Destinations
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="calculator.html">
+                            Trip Calculator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="appointment.html"
+                           class="active"
+                           aria-current="page">
+                            Appointment
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero"
+                 aria-labelledby="page-title">
+
+            <div class="container">
+
+                <p class="hero-eyebrow">
+                    PERSONALISED TRAVEL PLANNING
+                </p>
+
+                <h1 id="page-title">
+                    Request an Appointment
+                </h1>
+
+                <p>
+                    Have a destination in mind?
+                    Send us your preferred appointment date
+                    and travel requirements to request
+                    a personalised travel consultation.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- APPOINTMENT FORM SECTION -->
+        <section class="section appointment-section"
+                 aria-labelledby="appointment-heading">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-eyebrow">
+                        LET'S PLAN YOUR NEXT JOURNEY
+                    </p>
+
+                    <h2 id="appointment-heading">
+                        Book a Travel Consultation
+                    </h2>
+
+                    <p>
+                        Complete the form below to request
+                        an appointment with our travel team.
+                        We will review your request and
+                        contact you about availability.
+                    </p>
+
+                </div>
+
+                <div class="form-container reveal">
+
+                    <!-- Formspree will be configured later.
+                         JavaScript handles validation and
+                         prevents unconfigured submissions. -->
+
+                    <form id="appointment-form"
+                          data-form-type="appointment"
+                          data-endpoint="https://formspree.io/f/xeaawkky"
+                          method="POST"
+                          novalidate>
+
+                        <!-- FULL NAME -->
+                        <div class="form-group">
+
+                            <label for="appointment-name">
+                                Full Name *
+                            </label>
+
+                            <input type="text"
+                                   id="appointment-name"
+                                   name="name"
+                                   autocomplete="name"
+                                   minlength="2"
+                                   maxlength="100"
+                                   placeholder="Enter your full name"
+                                   aria-describedby="appointment-name-error"
+                                   required>
+
+                            <span id="appointment-name-error"
+                                  class="form-error"></span>
+
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label for="appointment-email">
+                                Email Address *
+                            </label>
+
+                            <input type="email"
+                                   id="appointment-email"
+                                   name="email"
+                                   autocomplete="email"
+                                   maxlength="254"
+                                   placeholder="example@email.com"
+                                   aria-describedby="appointment-email-error"
+                                   required>
+
+                            <span id="appointment-email-error"
+                                  class="form-error"></span>
+
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="form-group">
+
+                            <label for="appointment-phone">
+                                Phone Number *
+                            </label>
+
+                            <input type="tel"
+                                   id="appointment-phone"
+                                   name="phone"
+                                   autocomplete="tel"
+                                   maxlength="25"
+                                   placeholder="e.g. 0412 345 678"
+                                   aria-describedby="appointment-phone-help appointment-phone-error"
+                                   required>
+
+                            <small id="appointment-phone-help">
+                                Include your country code if calling
+                                from outside Australia.
+                            </small>
+
+                            <span id="appointment-phone-error"
+                                  class="form-error"></span>
+
+                        </div>
+
+                        <!-- PREFERRED APPOINTMENT DATE -->
+                        <div class="form-group">
+
+                            <label for="appointment-date">
+                                Preferred Appointment Date *
+                            </label>
+
+                            <input type="date"
+                                   id="appointment-date"
+                                   name="preferred_date"
+                                   aria-describedby="appointment-date-help appointment-date-error"
+                                   required>
+
+                            <small id="appointment-date-help">
+                                Select a future date.
+                                This is a request, not a
+                                confirmed appointment.
+                            </small>
+
+                            <span id="appointment-date-error"
+                                  class="form-error"></span>
+
+                        </div>
+
+                        <!-- MESSAGE -->
+                        <div class="form-group">
+
+                            <label for="appointment-message">
+                                Message *
+                            </label>
+
+                            <textarea id="appointment-message"
+                                      name="message"
+                                      rows="6"
+                                      minlength="10"
+                                      maxlength="2000"
+                                      placeholder="Tell us where you would like to travel, your preferred dates and any special requirements."
+                                      aria-describedby="appointment-message-help appointment-message-error"
+                                      required></textarea>
+
+                            <small id="appointment-message-help">
+                                Please provide at least 10 characters.
+                                Avoid sharing passport or payment details.
+                            </small>
+
+                            <span id="appointment-message-error"
+                                  class="form-error"></span>
+
+                        </div>
+
+                        <!-- PRIVACY NOTICE -->
+                        <p class="form-privacy-note">
+                            Your details will be used to respond
+                            to your appointment request.
+                            Please do not include sensitive personal
+                            or payment information.
+                        </p>
+
+                        <!-- SUBMIT AND RESET -->
+                        <div class="form-actions">
+
+                            <button type="submit"
+                                    id="appointment-submit"
+                                    class="btn btn-secondary">
+                                Send Appointment Request
+                            </button>
+
+                            <button type="reset"
+                                    class="btn btn-reset">
+                                Clear Form
+                            </button>
+
+                        </div>
+
+                        <!-- SUBMISSION STATUS -->
+                        <div id="appointment-status"
+                             class="form-status"
+                             role="status"
+                             aria-live="polite"
+                             aria-atomic="true"
+                             tabindex="-1"
+                             hidden></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- APPOINTMENT PROCESS -->
+        <section class="section packages-section"
+                 aria-labelledby="process-heading">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-eyebrow">
+                        SIMPLE TRAVEL PLANNING
+                    </p>
+
+                    <h2 id="process-heading">
+                        How Appointment Requests Work
+                    </h2>
+
+                    <p>
+                        Our consultation request process
+                        is designed to be simple and convenient.
+                    </p>
+
+                </div>
+
+                <div class="benefits-grid">
+
+                    <article class="benefit-item reveal">
+
+                        <span class="benefit-number">
+                            01
+                        </span>
+
+                        <h3>Share Your Travel Ideas</h3>
+
+                        <p>
+                            Complete the form with your
+                            contact details, preferred
+                            appointment date and holiday plans.
+                        </p>
+
+                    </article>
+
+                    <article class="benefit-item reveal">
+
+                        <span class="benefit-number">
+                            02
+                        </span>
+
+                        <h3>Request Review</h3>
+
+                        <p>
+                            The travel team can review
+                            your enquiry and discuss
+                            possible consultation times.
+                        </p>
+
+                    </article>
+
+                    <article class="benefit-item reveal">
+
+                        <span class="benefit-number">
+                            03
+                        </span>
+
+                        <h3>Plan Your Journey</h3>
+
+                        <p>
+                            Discuss suitable destinations,
+                            potential itineraries and
+                            estimated travel expenses.
+                        </p>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ALTERNATIVE CONTACT CTA -->
+        <section class="cta-section"
+                 aria-labelledby="cta-heading">
+
+            <div class="container cta-content reveal">
+
+                <p class="section-eyebrow">
+                    HAVE A QUICK QUESTION?
+                </p>
+
+                <h2 id="cta-heading">
+                    We're Here to Help You Explore
+                </h2>
+
+                <p>
+                    If you have a general question about
+                    our travel services, you can also
+                    send a message through our contact page.
+                </p>
+
+                <a href="contact.html"
+                   class="btn btn-primary">
+                    Contact Our Team
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="logo footer-logo"
+                   aria-label="WanderLux homepage">
+                    Wander<span>Lux</span>
+                    <small>TRAVEL AGENCY</small>
+                </a>
+
+                <p>
+                    Creating personalised travel experiences
+                    and helping travellers discover
+                    exciting destinations.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">
+                            Destinations
+                        </a>
+                    </li>
+                    <li>
+                        <a href="calculator.html">
+                            Trip Calculator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="appointment.html">
+                            Appointment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h2>Travel Services</h2>
+
+                <ul>
+                    <li>
+                        <a href="destinations.html">
+                            Holiday Packages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">
+                            Guided Tours
+                        </a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">
+                            Flights &amp; Hotels
+                        </a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">
+                            Honeymoon Specials
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h2>Get in Touch</h2>
+
+                <p>
+                    Have questions about your next
+                    holiday? Contact us to discuss
+                    your travel requirements.
+                </p>
+
+                <a href="contact.html">
+                    Contact WanderLux
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+
+            <p>
+                &copy;
+                <span id="current-year">2026</span>
+                WanderLux Travel Agency.
+                All rights reserved.
+            </p>
+
+            <p>
+                Designed for ICT502 Web Development Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

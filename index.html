@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WanderLux Travel Agency | Discover Your Next Journey</title>
+
+    <meta name="description"
+          content="Discover unforgettable holidays with WanderLux Travel Agency. Explore Bali, Santorini, Switzerland and personalised travel packages.">
+
+    <meta name="theme-color" content="#103B4A">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Accessibility: skip directly to main content -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+    <!-- HEADER AND NAVIGATION -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo"
+               aria-label="WanderLux Travel Agency homepage">
+                Wander<span>Lux</span>
+                <small>TRAVEL AGENCY</small>
+            </a>
+
+            <button class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="primary-navigation"
+                 class="primary-nav"
+                 aria-label="Main navigation">
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html"
+                           class="active"
+                           aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="destinations.html">Destinations</a>
+                    </li>
+                    <li>
+                        <a href="calculator.html">Trip Calculator</a>
+                    </li>
+                    <li>
+                        <a href="appointment.html">Appointment</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- FEATURED DESTINATIONS CAROUSEL -->
+        <section class="hero"
+                 aria-label="Featured travel destinations">
+
+            <div class="hero-carousel"
+                 aria-roledescription="carousel"
+                 aria-label="Explore featured holiday destinations">
+
+                <!-- Slide 1 -->
+                <div class="hero-slide active"
+                     data-slide="0"
+                     aria-label="Slide 1 of 3: Bali">
+
+                    <img src="images/bali.jpg"
+                         alt="Tropical beach with clear blue water in Bali"
+                         class="hero-image"
+                         fetchpriority="high">
+
+                    <div class="hero-overlay"></div>
+
+                    <div class="container hero-content">
+                        <p class="hero-eyebrow">
+                            EXPLORE THE EXTRAORDINARY
+                        </p>
+
+                        <h1>
+                            Discover the World
+                            <span>With WanderLux</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            From beautiful tropical beaches to
+                            unforgettable cultural experiences,
+                            let us create your perfect journey.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="destinations.html"
+                               class="btn btn-primary">
+                                Explore Destinations
+                            </a>
+
+                            <a href="calculator.html"
+                               class="btn btn-outline-light">
+                                Plan Your Budget
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide"
+                     data-slide="1"
+                     aria-label="Slide 2 of 3: Santorini"
+                     aria-hidden="true"
+                     inert>
+
+                    <img src="images/santorini.jpg"
+                         alt="White buildings overlooking the blue sea in Santorini, Greece"
+                         class="hero-image"
+                         loading="lazy">
+
+                    <div class="hero-overlay"></div>
+
+                    <div class="container hero-content">
+                        <p class="hero-eyebrow">
+                            ROMANTIC GETAWAYS
+                        </p>
+
+                        <h2 class="hero-slide-title">
+                            Experience the Beauty
+                            <span>of Santorini</span>
+                        </h2>
+
+                        <p class="hero-description">
+                            Enjoy breathtaking sunsets,
+                            beautiful coastal villages and
+                            personalised romantic escapes.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="destinations.html"
+                               class="btn btn-primary">
+                                View Holiday Packages
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero-slide"
+                     data-slide="2"
+                     aria-label="Slide 3 of 3: Switzerland"
+                     aria-hidden="true"
+                     inert>
+
+                    <img src="images/switzerland.jpg"
+                         alt="Mountain landscape with an alpine lake in Switzerland"
+                         class="hero-image"
+                         loading="lazy">
+
+                    <div class="hero-overlay"></div>
+
+                    <div class="container hero-content">
+                        <p class="hero-eyebrow">
+                            ADVENTURE AWAITS
+                        </p>
+
+                        <h2 class="hero-slide-title">
+                            Explore Switzerland's
+                            <span>Natural Wonders</span>
+                        </h2>
+
+                        <p class="hero-description">
+                            Discover snowy mountains,
+                            peaceful lakes and unforgettable
+                            experiences in the Swiss Alps.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="appointment.html"
+                               class="btn btn-primary">
+                                Plan Your Adventure
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control carousel-prev"
+                        type="button"
+                        aria-label="Previous destination">
+                    &#10094;
+                </button>
+
+                <button class="carousel-control carousel-next"
+                        type="button"
+                        aria-label="Next destination">
+                    &#10095;
+                </button>
+
+                <div class="carousel-dots"
+                     aria-label="Choose a featured destination">
+
+                    <button type="button"
+                            class="carousel-dot active"
+                            data-slide-to="0"
+                            aria-label="Show Bali slide"
+                            aria-current="true">
+                    </button>
+
+                    <button type="button"
+                            class="carousel-dot"
+                            data-slide-to="1"
+                            aria-label="Show Santorini slide">
+                    </button>
+
+                    <button type="button"
+                            class="carousel-dot"
+                            data-slide-to="2"
+                            aria-label="Show Switzerland slide">
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section class="section intro-section"
+                 aria-labelledby="intro-heading">
+
+            <div class="container intro-grid">
+
+                <div class="intro-text reveal">
+                    <p class="section-eyebrow">
+                        WELCOME TO WANDERLUX
+                    </p>
+
+                    <h2 id="intro-heading">
+                        Your Journey, Our Passion
+                    </h2>
+
+                    <p>
+                        WanderLux Travel Agency helps travellers
+                        discover exciting destinations through
+                        personalised holiday planning, guided
+                        tours and customised travel packages.
+                    </p>
+
+                    <p>
+                        Whether you are planning a relaxing beach
+                        holiday, a romantic honeymoon or an
+                        adventurous trip, our goal is to make
+                        your travel experience enjoyable and
+                        convenient from beginning to end.
+                    </p>
+
+                    <a href="about.html"
+                       class="btn btn-secondary">
+                        Learn About Us
+                    </a>
+                </div>
+
+                <div class="intro-image reveal">
+                    <img src="images/bali.jpg"
+                         alt="Beautiful tropical destination representing WanderLux holiday experiences"
+                         loading="lazy">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- POPULAR DESTINATIONS -->
+        <section class="section packages-section"
+                 aria-labelledby="packages-heading">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-eyebrow">
+                        HANDPICKED EXPERIENCES
+                    </p>
+
+                    <h2 id="packages-heading">
+                        Popular Holiday Packages
+                    </h2>
+
+                    <p>
+                        Explore some of our featured destinations
+                        and start planning your next holiday.
+                    </p>
+                </div>
+
+                <div class="package-grid">
+
+                    <!-- Bali Package -->
+                    <article class="package-card reveal">
+                        <img src="images/bali.jpg"
+                             alt="Bali tropical beach holiday"
+                             loading="lazy">
+
+                        <div class="package-content">
+                            <p class="package-location">
+                                Indonesia
+                            </p>
+
+                            <h3>Bali Paradise Escape</h3>
+
+                            <p>
+                                Discover tropical beaches,
+                                peaceful resorts and exciting
+                                island experiences.
+                            </p>
+
+                            <div class="package-footer">
+                                <span>5-Day Holiday</span>
+
+                                <a href="calculator.html"
+                                   class="package-link">
+                                    Estimate Cost
+                                    <span aria-hidden="true">
+                                        &rarr;
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Santorini Package -->
+                    <article class="package-card reveal">
+                        <img src="images/santorini.jpg"
+                             alt="Santorini white buildings and Mediterranean coastline"
+                             loading="lazy">
+
+                        <div class="package-content">
+                            <p class="package-location">
+                                Greece
+                            </p>
+
+                            <h3>Santorini Romantic Escape</h3>
+
+                            <p>
+                                Experience beautiful sunsets,
+                                ocean views and unforgettable
+                                romantic moments.
+                            </p>
+
+                            <div class="package-footer">
+                                <span>7-Day Holiday</span>
+
+                                <a href="appointment.html"
+                                   class="package-link">
+                                    Enquire Now
+                                    <span aria-hidden="true">
+                                        &rarr;
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Switzerland Package -->
+                    <article class="package-card reveal">
+                        <img src="images/switzerland.jpg"
+                             alt="Scenic mountain and lake landscape in Switzerland"
+                             loading="lazy">
+
+                        <div class="package-content">
+                            <p class="package-location">
+                                Switzerland
+                            </p>
+
+                            <h3>Swiss Alpine Adventure</h3>
+
+                            <p>
+                                Explore breathtaking mountains,
+                                beautiful lakes and scenic
+                                European destinations.
+                            </p>
+
+                            <div class="package-footer">
+                                <span>6-Day Holiday</span>
+
+                                <a href="calculator.html"
+                                   class="package-link">
+                                    Estimate Cost
+                                    <span aria-hidden="true">
+                                        &rarr;
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="section-action reveal">
+                    <a href="destinations.html"
+                       class="btn btn-secondary">
+                        View All Destinations
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="section services-section"
+                 aria-labelledby="services-heading">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-eyebrow">
+                        OUR TRAVEL SERVICES
+                    </p>
+
+                    <h2 id="services-heading">
+                        Travel Your Way
+                    </h2>
+
+                    <p>
+                        Flexible services designed to match
+                        different travel needs and preferences.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <article class="service-card reveal">
+                        <div class="service-icon" aria-hidden="true">
+                            &#9992;
+                        </div>
+
+                        <h3>Holiday Packages</h3>
+
+                        <p>
+                            Explore planned holidays with
+                            accommodation and exciting
+                            travel experiences.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-icon" aria-hidden="true">
+                            &#9968;
+                        </div>
+
+                        <h3>Guided Tours</h3>
+
+                        <p>
+                            Discover destinations and
+                            attractions through organised
+                            guided travel experiences.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-icon" aria-hidden="true">
+                            &#9993;
+                        </div>
+
+                        <h3>Flights &amp; Hotels</h3>
+
+                        <p>
+                            Get assistance with choosing
+                            suitable flight and accommodation
+                            options for your trip.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-icon" aria-hidden="true">
+                            &#9825;
+                        </div>
+
+                        <h3>Honeymoon Specials</h3>
+
+                        <p>
+                            Plan a romantic getaway with
+                            personalised destinations and
+                            memorable experiences.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE WANDERLUX -->
+        <section class="section why-section"
+                 aria-labelledby="why-heading">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-eyebrow">
+                        THE WANDERLUX DIFFERENCE
+                    </p>
+
+                    <h2 id="why-heading">
+                        Why Travel With Us?
+                    </h2>
+                </div>
+
+                <div class="benefits-grid">
+
+                    <div class="benefit-item reveal">
+                        <span class="benefit-number">01</span>
+
+                        <h3>Personalised Planning</h3>
+
+                        <p>
+                            Travel recommendations based
+                            on your interests, budget
+                            and travel preferences.
+                        </p>
+                    </div>
+
+                    <div class="benefit-item reveal">
+                        <span class="benefit-number">02</span>
+
+                        <h3>Flexible Travel Options</h3>
+
+                        <p>
+                            Choose from different
+                            destinations, packages and
+                            travel styles.
+                        </p>
+                    </div>
+
+                    <div class="benefit-item reveal">
+                        <span class="benefit-number">03</span>
+
+                        <h3>Dedicated Support</h3>
+
+                        <p>
+                            Friendly assistance with
+                            travel enquiries and
+                            holiday planning requests.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOKING CALL TO ACTION -->
+        <section class="cta-section"
+                 aria-labelledby="cta-heading">
+
+            <div class="container cta-content reveal">
+                <p class="section-eyebrow">
+                    START YOUR ADVENTURE
+                </p>
+
+                <h2 id="cta-heading">
+                    Ready to Plan Your Dream Holiday?
+                </h2>
+
+                <p>
+                    Tell us about your travel ideas
+                    and let WanderLux help you plan
+                    your next memorable journey.
+                </p>
+
+                <a href="appointment.html"
+                   class="btn btn-primary">
+                    Request an Appointment
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- WEBSITE FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    Wander<span>Lux</span>
+                    <small>TRAVEL AGENCY</small>
+                </a>
+
+                <p>
+                    Creating personalised travel
+                    experiences and helping you
+                    explore the world with confidence.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="calculator.html">Trip Calculator</a></li>
+                    <li><a href="appointment.html">Appointment</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h2>Travel Services</h2>
+
+                <ul>
+                    <li><a href="destinations.html">Holiday Packages</a></li>
+                    <li><a href="destinations.html">Guided Tours</a></li>
+                    <li><a href="destinations.html">Flights &amp; Hotels</a></li>
+                    <li><a href="destinations.html">Honeymoon Specials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h2>Get in Touch</h2>
+
+                <p>
+                    Have a question about your next trip?
+                    Our team is here to help.
+                </p>
+
+                <a href="contact.html">
+                    Contact WanderLux
+                </a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>
+                &copy; <span id="current-year">2026</span>
+                WanderLux Travel Agency.
+                All rights reserved.
+            </p>
+
+            <p>
+                Designed for ICT502 Web Development Project.
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
