@@ -1910,3 +1910,23 @@ p {
     }
 
 }
+
+
+/* Contact phone and email link styling */
+
+.contact-detail a {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    overflow-wrap: anywhere;
+}
+
+.contact-detail a:hover {
+    color: #F4D7A0;
+}
+
+.contact-detail a:focus-visible {
+    outline: 3px solid #F4D7A0;
+    outline-offset: 4px;
+}
